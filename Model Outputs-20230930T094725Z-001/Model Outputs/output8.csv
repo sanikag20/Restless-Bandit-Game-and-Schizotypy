@@ -1,0 +1,17 @@
+,df,BIC,AICc,dAICc,df,weight,npar,AIC,BIC,logLik,deviance,Chisq,Df,Pr(>Chisq),
+lmer.1,4,26370.56329,26098.41439,0,11,0.999335837,4,26339.26984,26370.56329,-13165.63492,26331.26984,NA,NA,NA,"lmer.1 <- lmer(advantageous ~ stable +(1|run_id), data=df, REML=FALSE)"
+lmer.2,5,26374.5613,26113.04703,14.63263675,10,0.000664163,5,26335.44449,26374.5613,-13162.72225,26325.44449,5.825347728,1,0.015796845,"lmer.2 <- lmer(advantageous ~ stable + stress +(1|run_id), data=df, REML=FALSE)"
+lmer.3,6,26314.14638,26151.31071,52.89631124,9,3.26E-12,6,26267.20622,26314.14638,-13127.60311,26255.20622,70.23827818,1,5.26E-17,"lmer.3 <- lmer(advantageous ~ stable + stress + scale(min1) + (1|run_id), data=df, REML=FALSE)"
+lmer.4,7,26221.92167,26167.16421,68.74981935,7,1.18E-15,7,26167.15814,26221.92167,-13076.57907,26153.15814,102.0480717,1,5.42E-24,"lmer.4 <- lmer(advantageous ~ stable + stress + scale(min1) + scale(max1) +(1|run_id), data=df, REML=FALSE)"
+lmer.5,8,26231.44911,26168.87003,70.45563135,8,5.02E-16,8,26168.86222,26231.44911,-13076.43111,26152.86222,0.295922658,1,0.586449912,"lmer.5 <- lmer(advantageous ~ stable + stress + scale(min1) + scale(max1) + scale(max1):scale(min1) + (1|run_id), data=df, REML=FALSE)"
+lmer.6,9,26221.7112,26267.21077,168.7963734,6,2.22E-37,9,26151.30095,26221.7112,-13066.65047,26133.30095,19.56127175,1,9.74E-06,"lmer.6 <- lmer(advantageous ~ stable + stress + scale(min1) + scale(max1) + scale(max1):scale(min1) + cum_reward +(1|run_id), data=df, REML=FALSE)"
+lmer.7,10,26191.26872,26335.44775,237.0333508,5,3.38E-52,10,26113.03511,26191.26872,-13046.51755,26093.03511,40.26584316,1,2.22E-10,"lmer.7 <- lmer(advantageous ~ stable + stress + scale(min1) + scale(max1) + scale(max1):scale(min1) + cum_reward + cum_reward:scale(max1) + (1|run_id), data=df, REML=FALSE)"
+lmer.8,11,26184.45706,26339.27201,240.8576146,4,4.99E-53,11,26098.40008,26184.45706,-13038.20004,26076.40008,16.63502248,1,4.53E-05,"lmer.8 <- lmer(advantageous ~ stable + stress + scale(min1) + scale(max1) + scale(max1):scale(min1) + cum_reward + cum_reward:scale(max1) + cum_reward:scale(min1) + (1|run_id), data=df, REML=FALSE)"
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Notes:,,,,,,,,,,,,,,,
+stable + stress + scale(min1) + scale(max1) + scale(max1):scale(min1) + cum_reward + cum_reward:scale(max1) + cum_reward:scale(min1) ,,,,,,,,,,,,,,,
+"Much more gradual, but overall avg has a better impact than min1",,,,,,,,,,,,,,,
+"Key variables: scale(Min1), scame(max1), cum_reward:scale(max1)",,,,,,,,,,,,,,,
+Bad variable - scale(max1):scale(min1),,,,,,,,,,,,,,,
+Note - Use avg rather than min1,,,,,,,,,,,,,,,

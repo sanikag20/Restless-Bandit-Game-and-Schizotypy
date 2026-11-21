@@ -1,0 +1,19 @@
+,df,BIC,AICc,dAICc,df,weight,npar,AIC,BIC,logLik,deviance,Chisq,Df,Pr(>Chisq),
+lmer.1,4,26370.56329,25785.03877,0,11,0.799751271,4,26339.26984,26370.56329,-13165.63492,26331.26984,NA,NA,NA,"lmer.1 <- lmer(advantageous ~ stable +(1|run_id), data=df, REML=FALSE)"
+lmer.2,5,26374.5613,25787.80825,2.769481062,10,0.200248729,5,26335.44449,26374.5613,-13162.72225,26325.44449,5.825347728,1,0.015796845,"lmer.2 <- lmer(advantageous ~ stable + stress +(1|run_id), data=df, REML=FALSE)"
+lmer.3,6,26332.10888,25879.71925,94.68047286,8,2.20E-21,6,26285.16872,26332.10888,-13136.58436,26273.16872,52.27577863,1,4.82E-13,"lmer.3 <- lmer(advantageous ~ stable + stress + scale(avg) + (1|run_id), data=df, REML=FALSE)"
+lmer.4,7,25978.74648,25880.983,95.94422801,9,1.17E-21,7,25923.98295,25978.74648,-12954.99147,25909.98295,363.1857681,1,5.70E-81,"lmer.4 <- lmer(advantageous ~ stable + stress + scale(avg) + scale(max1) +(1|run_id), data=df, REML=FALSE)"
+lmer.5,8,25942.29833,25923.98902,138.9502445,7,5.37E-31,8,25879.71144,25942.29833,-12931.85572,25863.71144,46.2715063,1,1.03E-11,"lmer.5 <- lmer(advantageous ~ stable + stress + scale(avg) + scale(max1) + scale(max1):scale(avg) + (1|run_id), data=df, REML=FALSE)"
+lmer.6,9,25951.3835,26285.17327,500.1344949,6,2.00E-109,9,25880.97324,25951.3835,-12931.48662,25862.97324,0.738196498,1,0.390239217,"lmer.6 <- lmer(advantageous ~ stable + stress + scale(avg) + scale(max1) + scale(max1):scale(avg) + trial_no +(1|run_id), data=df, REML=FALSE)"
+lmer.7,10,25866.02994,26335.44775,550.4089728,5,2.42E-120,10,25787.79633,25866.02994,-12883.89816,25767.79633,95.17691561,1,1.74E-22,"lmer.7 <- lmer(advantageous ~ stable + stress + scale(avg) + scale(max1) + scale(max1):scale(avg) + trial_no + cum_reward + (1|run_id), data=df, REML=FALSE)"
+lmer.8,11,25871.08144,26339.27201,554.2332366,4,3.57E-121,11,25785.02446,25871.08144,-12881.51223,25763.02446,4.771866791,1,0.028928442,"lmer.8 <- lmer(advantageous ~ stable + stress + scale(avg) + scale(max1) + scale(max1):scale(avg) + trial_no + cum_reward + cum_reward:scale(max1) + (1|run_id), data=df, REML=FALSE)"
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Notes:,,,,,,,,,,,,,,,
+stable + stress + scale(avg) + scale(max1) + scale(max1):scale(avg) + trial_no + cum_reward + cum_reward:scale(max1),,,,,,,,,,,,,,,
+Trial no. - Increase in scores - not agood variables,,,,,,,,,,,,,,,
+cum_reward - good variable,,,,,,,,,,,,,,,
+"cum_reward:scale(max1) - good variable, but not required",,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Key variable: scale(max1),,,,,,,,,,,,,,,

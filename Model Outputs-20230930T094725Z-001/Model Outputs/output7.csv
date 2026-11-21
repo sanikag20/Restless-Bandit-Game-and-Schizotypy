@@ -1,0 +1,18 @@
+,df,BIC,AICc,dAICc,df,weight,npar,AIC,BIC,logLik,deviance,Chisq,Df,Pr(>Chisq),
+lmer.1,4,26370.56329,25810.18349,0,11,0.981439457,4,26339.26984,26370.56329,-13165.63492,26331.26984,NA,NA,NA,"lmer.1 <- lmer(advantageous ~ stable +(1|run_id), data=df, REML=FALSE)"
+lmer.2,5,26374.5613,25818.21218,8.028696152,10,0.017719616,5,26335.44449,26374.5613,-13162.72225,26325.44449,5.825347728,1,0.015796845,"lmer.2 <- lmer(advantageous ~ stable + stress +(1|run_id), data=df, REML=FALSE)"
+lmer.3,6,26332.10888,25824.30803,14.1245398,9,0.000840928,6,26285.16872,26332.10888,-13136.58436,26273.16872,52.27577863,1,4.82E-13,"lmer.3 <- lmer(advantageous ~ stable + stress + scale(avg) + (1|run_id), data=df, REML=FALSE)"
+lmer.4,7,25978.74648,25879.71925,69.53575935,8,7.80E-16,7,25923.98295,25978.74648,-12954.99147,25909.98295,363.1857681,1,5.70E-81,"lmer.4 <- lmer(advantageous ~ stable + stress + scale(avg) + scale(max1) +(1|run_id), data=df, REML=FALSE)"
+lmer.5,8,25942.29833,25923.98902,113.805531,7,1.90E-25,8,25879.71144,25942.29833,-12931.85572,25863.71144,46.2715063,1,1.03E-11,"lmer.5 <- lmer(advantageous ~ stable + stress + scale(avg) + scale(max1) + scale(max1):scale(avg) + (1|run_id), data=df, REML=FALSE)"
+lmer.6,9,25894.70852,26285.17327,474.9897814,6,7.07E-104,9,25824.29827,25894.70852,-12903.14913,25806.29827,57.41317119,1,3.53E-14,"lmer.6 <- lmer(advantageous ~ stable + stress + scale(avg) + scale(max1) + scale(max1):scale(avg) + cum_reward +(1|run_id), data=df, REML=FALSE)"
+lmer.7,10,25896.43387,26335.44775,525.2642593,5,8.55E-115,10,25818.20026,25896.43387,-12899.10013,25798.20026,8.098012319,1,0.004431383,"lmer.7 <- lmer(advantageous ~ stable + stress + scale(avg) + scale(max1) + scale(max1):scale(avg) + cum_reward + cum_reward:scale(max1) + (1|run_id), data=df, REML=FALSE)"
+lmer.8,11,25896.22615,26339.27201,529.0885231,4,1.26E-115,11,25810.16918,25896.22615,-12894.08459,25788.16918,10.03108188,1,0.001539206,"lmer.8 <- lmer(advantageous ~ stable + stress + scale(avg) + scale(max1) + scale(max1):scale(avg) + cum_reward + cum_reward:scale(max1) + cum_reward:scale(avg) + (1|run_id), data=df, REML=FALSE)"
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Notes:,,,,,,,,,,,,,,,
+stable + stress + scale(avg) + scale(max1) + scale(max1):scale(avg) + cum_reward + cum_reward:scale(max1) + cum_reward:scale(avg) ,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Very significant drop at - scale(max1),,,,,,,,,,,,,,,
+"Significant drops at -  cum_reward, cum_reward:scale(max1), cum_reward:scale(avg) ",,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Key variable: scale(max1),,,,,,,,,,,,,,,

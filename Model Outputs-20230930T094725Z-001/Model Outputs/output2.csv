@@ -1,0 +1,20 @@
+MODEL 2,df,BIC,AICc,dAICc,df,weight,npar,AIC,BIC,logLik,deviance,Chisq,Df,Pr(>Chisq),
+lmer.1,4,26370.56329,25805.49678,0,11,1,4,26339.26984,26370.56329,-13165.63492,26331.26984,NA,NA,NA,"lmer.1 <- lmer(advantageous ~ stable +(1|run_id), data=df, REML=FALSE)"
+lmer.2,5,26374.5613,25869.86777,64.37098669,10,1.05E-14,5,26335.44449,26374.5613,-13162.72225,26325.44449,5.825347728,1,0.015796845,"lmer.2 <- lmer(advantageous ~ stable + stress +(1|run_id), data=df, REML=FALSE)"
+lmer.3,6,26384.30348,25896.25094,90.75415835,9,1.96E-20,6,26337.36332,26384.30348,-13162.68166,26325.36332,0.081178453,1,0.775706715,"lmer.3 <- lmer(advantageous ~ stable + stress + stress:stable +(1|run_id), data=df, REML=FALSE)"
+lmer.4,7,26341.20834,25925.50344,120.0066543,8,8.73E-27,7,26286.4448,26341.20834,-13136.2224,26272.4448,52.91851069,1,3.48E-13,"lmer.4 <- lmer(advantageous ~ stable + stress + stress:stable + scale(max1) +(1|run_id), data=df, REML=FALSE)"
+lmer.5,8,25988.08252,26286.45087,480.954092,7,3.65E-105,8,25925.49563,25988.08252,-12954.74782,25909.49563,362.9491724,1,6.42E-81,"lmer.5 <- lmer(advantageous ~ stable + stress + stress:stable + scale(max1) + scale(diff3) +(1|run_id), data=df, REML=FALSE)"
+lmer.6,9,25966.65144,26335.44775,529.9509627,5,8.37E-116,9,25896.24118,25966.65144,-12939.12059,25878.24118,31.25444754,1,2.26E-08,"lmer.6 <- lmer(advantageous ~ stable + stress + stress:stable + scale(max1) + scale(diff3) + scale(diff2) +(1|run_id), data=df, REML=FALSE)"
+lmer.7,10,25948.08946,26337.36787,531.871085,6,3.20E-116,10,25869.85584,25948.08946,-12924.92792,25849.85584,28.38534033,1,9.94E-08,"lmer.7 <- lmer(advantageous ~ stable + stress + stress:stable + scale(max1) + scale(diff3) + scale(diff2) +scale(diff1) +(1|run_id), data=df, REML=FALSE)"
+lmer.8,11,25891.53945,26339.27201,533.7752265,4,1.24E-116,11,25805.48247,25891.53945,-12891.74124,25783.48247,66.37337242,1,3.73E-16,"lmer.8 <- lmer(advantageous ~ stable + stress + stress:stable + scale(max1) + scale(diff3) + scale(diff2) +scale(diff1) + cum_reward+ (1|run_id), data=df, REML=FALSE)"
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Notes:,,,,,,,,,,,,,,,
+stable + stress + stress:stable + scale(max1) + scale(diff3) + scale(diff2) +scale(diff1) + cum_reward,,,,,,,,,,,,,,,
+1. Stress - drop,,,,,,,,,,,,,,,
+2. Stress:Stable - Increase,,,,,,,,,,,,,,,
+3. Scale(Max1) - drop,,,,,,,,,,,,,,,
+4. Scale(diff3) - Very significant drop,,,,,,,,,,,,,,,
+"5. scale(diff2) +scale(diff1) + cum_reward - drop, not so significant",,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Key variables - Scale(diff3),,,,,,,,,,,,,,,

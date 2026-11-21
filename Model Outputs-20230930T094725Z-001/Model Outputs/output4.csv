@@ -1,0 +1,21 @@
+,df,BIC,AICc,dAICc,df,weight,npar,AIC,BIC,logLik,deviance,Chisq,Df,Pr(>Chisq),
+lmer.1,4,26370.56329,25715.57944,0,12,1,4,26339.26984,26370.56329,-13165.63492,26331.26984,NA,NA,NA,"lmer.1 <- lmer(advantageous ~ stable +(1|run_id), data=df, REML=FALSE)"
+lmer.2,5,26374.5613,25902.2312,186.6517585,10,2.95E-41,5,26335.44449,26374.5613,-13162.72225,26325.44449,5.825347728,1,0.015796845,"lmer.2 <- lmer(advantageous ~ stable + stress +(1|run_id), data=df, REML=FALSE)"
+lmer.3,6,26384.30348,25911.26133,195.6818964,9,3.22E-43,6,26337.36332,26384.30348,-13162.68166,26325.36332,0.081178453,1,0.775706715,"lmer.3 <- lmer(advantageous ~ stable + stress + stress:stable +(1|run_id), data=df, REML=FALSE)"
+lmer.4,7,26341.20834,25925.50344,209.9239983,8,2.60E-46,7,26286.4448,26341.20834,-13136.2224,26272.4448,52.91851069,1,3.48E-13,"lmer.4 <- lmer(advantageous ~ stable + stress + stress:stable + scale(max1) +(1|run_id), data=df, REML=FALSE)"
+lmer.5,8,25988.08252,26286.45087,570.871436,7,1.09E-124,8,25925.49563,25988.08252,-12954.74782,25909.49563,362.9491724,1,6.42E-81,"lmer.5 <- lmer(advantageous ~ stable + stress + stress:stable + scale(max1) + scale(diff4) +(1|run_id), data=df, REML=FALSE)"
+lmer.6,9,25981.66183,26335.44775,619.8683067,5,2.50E-135,9,25911.25158,25981.66183,-12946.62579,25893.25158,16.24405345,1,5.57E-05,"lmer.6 <- lmer(advantageous ~ stable + stress + stress:stable + scale(max1) + scale(diff4) + scale(max1):scale(diff4) +(1|run_id), data=df, REML=FALSE)"
+lmer.7,10,25980.45289,26337.36787,621.788429,6,9.56E-136,10,25902.21927,25980.45289,-12941.10964,25882.21927,11.0323066,1,0.000895377,"lmer.7 <- lmer(advantageous ~ stable + stress + stress:stable + scale(max1) + scale(diff4) + scale(max1):scale(diff4) + scale(max1):scale(diff4):scale(avg) +(1|run_id), data=df, REML=FALSE)"
+lmer.8,12,25809.44286,26339.27201,623.6925705,4,3.69E-136,12,25715.56253,25809.44286,-12845.78126,25691.56253,190.6567471,2,3.98E-42,"lmer.8 <- lmer(advantageous ~ stable + stress + stress:stable + scale(max1) + scale(diff4) + scale(max1):scale(diff4) + scale(max1):scale(diff4):scale(avg) + cum_reward:stable + (1|run_id), data=df, REML=FALSE)"
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Notes:,,,,,,,,,,,,,,,
+"stable, stress, stress:stable, scale(max1), scale(diff4), scale(max1):scale(diff4), scale(max1):scale(diff4):scale(avg), cum_reward:stable",,,,,,,,,,,,,,,
+1. Stress - drop in scores,,,,,,,,,,,,,,,
+2. Stress;Stable - increase in scores,,,,,,,,,,,,,,,
+3. scale(max1) - drop in scores,,,,,,,,,,,,,,,
+4. scale(diff4) - very significat drop,,,,,,,,,,,,,,,
+"5. scale(max1):scale(diff4), scale(max1):scale(diff4):scale(avg) - Not much change",,,,,,,,,,,,,,,
+6. cum_reward:stable - siginificant drop,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+"Good variables - cum_reward:stable, scale(diff4)",,,,,,,,,,,,,,,
